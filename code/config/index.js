@@ -5,8 +5,9 @@
 function Config(app)
 {
     require('dotenv').load();
-    require('./app')(app);
     require('./database')();
+    require('./app')(app);
+    require('./auth')(app);
     require('./view')(app);
 }
 
