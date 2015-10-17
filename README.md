@@ -1,2 +1,2 @@
 # accelerato-app
-The Accelerato Mac App. 
+The Accelerato Site. 
