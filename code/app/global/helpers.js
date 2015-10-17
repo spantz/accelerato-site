@@ -2,7 +2,7 @@
  * Created by jamesspence on 10/17/15.
  */
 
-module.exports = function () {
+module.exports = (function () {
     /**
      * @param {string} key
      * @param {*} [defaultValue]
@@ -17,4 +17,4 @@ module.exports = function () {
             return defaultValue;
         }
     }
-};
+})();
