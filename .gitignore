@@ -1,6 +1,6 @@
 .vagrant
 .idea
-node_modules
+code/node_modules
 public/.sass-cache
 .env
 public/.DS_Store
