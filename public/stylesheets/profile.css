@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+.profile-info {
+  text-align: center;
+}
+.profile-info .image {
+  border-radius: 9em;
+  height: 9em;
+  overflow: hidden;
+  box-shadow: 0 0 0.25em #DFDFDF;
+}
+.profile-info .name {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.profile-info .age {
+  font-size: .5em;
+  margin: .25em;
+  color: #DFDFDF;
+}
+
+.courses-container {
+  margin-top: 1em;
+}
+.courses-container .course {
+  margin-top: 1.5em;
+}
+.courses-container .course .title {
+  border-bottom: #F8E71C 0.25em solid;
+  padding-bottom: .25em;
+}
+.courses-container .session {
+  margin: .5em 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+.courses-container .session .date {
+  font-size: .75em;
+}
+.courses-container .session .start,
+.courses-container .session .end {
+  float: left;
+  width: 50%;
+}
+.courses-container .session .start {
+  text-align: left;
+}
+.courses-container .session .end {
+  text-align: right;
+}

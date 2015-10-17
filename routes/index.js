@@ -5,7 +5,7 @@ var users = require('./users');
 
 /* GET home page. */
 router.get('/', function(req, res) {
-    res.render('index', { title: 'Express' });
+  res.render('profile', { title: 'Accelerato' });
 });
 
 router.use('/users', users);
