@@ -5,3 +5,4 @@ public/.sass-cache
 .env
 public/.DS_Store
 .DS_Store
+**npm-debug.log

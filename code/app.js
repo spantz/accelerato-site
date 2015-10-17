@@ -1,12 +1,8 @@
 'use strict';
-
-//We include this first, to allow us to have absolute name paths.
-global.rootRequire = function (module) {
-    return require(__dirname + '/' + module);
-};
+require('app-module-path').addPath(__dirname);
 
 //Load our global helpers.
-rootRequire('app/global/helpers');
+require('app/global/helpers');
 
 //Create the app instance
 var express = require('express');
@@ -14,8 +10,8 @@ var app = express();
 
 //Now we load our config files.
 //This sets up our app, database, error handling, and view engine.
-rootRequire('config')(app);
+require('config')(app);
 
-app.use('/', rootRequire('routes'));
+app.use('/', require('routes'));
 
 module.exports = app;
