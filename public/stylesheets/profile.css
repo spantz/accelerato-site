@@ -1,0 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+.profile-info {
+  text-align: center;
+}
+.profile-info .image {
+  border-radius: 9em;
+  height: 9em;
+  overflow: hidden;
+  box-shadow: 0 0 0.25em #DFDFDF;
+}
+.profile-info .name {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.profile-info .age {
+  font-size: .5em;
+  margin: .25em;
+  color: #DFDFDF;
+}

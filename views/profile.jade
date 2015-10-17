@@ -1,0 +1,14 @@
+extends layout
+
+block head
+  link(rel='stylesheet', href='/stylesheets/profile.css')
+block content
+  .profile-info
+    img.image(src= user.image)
+    h2.name #{user.name}
+    p.age #{user.age}
+  .sessions-container
+    h2.title Upcoming Sessions
+    .sessions
+    
+  

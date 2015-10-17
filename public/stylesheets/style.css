@@ -1,8 +1,58 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+html {
+  height: 100%;
 }
 
-a {
-  color: #00B7FF;
+body {
+  padding: 0;
+  margin: 0;
+  background: #DFDFDF;
+  font: 20px 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  line-height: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+.page-header {
+  background: #4A4A4A;
+  color: #FFFFFF;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+.page-header .title {
+  padding: .5em;
+}
+.page-header .highlight {
+  height: .5em;
+  background: #F8E71C;
+}
+
+.page-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: block;
+}
+.page-container .page {
+  max-width: 1080px;
+  height: 100vh;
+  margin: 0 auto;
+  margin-top: 6em;
+  padding: 1em;
+  background: #FFFFFF;
+  box-shadow: #4A4A4A 0 0 0.125em;
+}
+
+.page-header {
+  z-index: 2;
+}
+
+.page-container {
+  z-index: 1;
 }

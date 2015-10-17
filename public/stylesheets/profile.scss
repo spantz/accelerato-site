@@ -1,0 +1,37 @@
+@import "compass/css3";
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+//Settings
+$light-gray: #DFDFDF;
+$image-height: 9em;
+//Tools
+//Generic
+
+//Base
+
+//Objects
+.profile-info {
+  text-align: center;
+  .image {
+    border-radius: $image-height;
+    height: $image-height;
+    overflow: hidden;
+    box-shadow: 0 0 .25em $light-gray;
+  }
+  .name {
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+  .age {
+    font-size: .5em;
+    margin: .25em;
+    color: $light-gray;
+  }
+}
+//Components
+
+//Trumps
+
+
+
+
