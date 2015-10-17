@@ -7,7 +7,6 @@ function Config(app)
     require('dotenv').load();
     require('./app')(app);
     require('./database')();
-    require('./error')(app);
     require('./view')(app);
 }
 
