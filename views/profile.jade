@@ -7,8 +7,13 @@ block content
     img.image(src= user.image)
     h2.name #{user.name}
     p.age #{user.age}
-  .sessions-container
-    h2.title Upcoming Sessions
-    .sessions
+  .courses-container
+    h2.title Courses
+    each course in courses
+      .course
+        h3.title #{course.title}
+        .session
+          .start #{course.start}
+          .end #{course.end}
     
   
