@@ -1,5 +1,10 @@
 'use strict';
 
+//We include this first, to allow us to have absolute name paths.
+global.rootRequire = function (module) {
+    return require(__dirname + '/../../' + module);
+};
+
 var express = require('express');
 var path = require('path');
 var favicon = require('static-favicon');
@@ -7,8 +12,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+var routes = rootRequire('routes/index');
+var users = rootRequire('routes/users');
 
 var app = express();
 
