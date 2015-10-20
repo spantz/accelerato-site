@@ -16,5 +16,13 @@ module.exports = (function () {
         } else {
             return defaultValue;
         }
+    };
+
+    global.btoa = function (value) {
+        return (new Buffer(value)).toString('base64');
+    };
+
+    global.atob = function (hash) {
+        return (new Buffer(hash, 'base64')).toString('ascii')
     }
 })();
