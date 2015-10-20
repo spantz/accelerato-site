@@ -1,0 +1,12 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        block head
+    body
+        form(method='POST')
+            input(type='text', name='username', placeholder='Username')
+            input(type='text', name='password', placeholder='Password')
+            button(type='submit') Submit!!
+        script(type='text/javascript', src='http://localhost:35729/livereload.js')

@@ -15,7 +15,9 @@ var User = sequelize.define('user', {
     password: {
         type: Sequelize.STRING,
         set: function (value) {
-            this.setDataValue('password', bcrypt.hash(value));
+            bcrypt.hash(value, null, null, function (err, hash) {
+                this.setDataValue('password', bcrypt.hash(hash));
+            });
         }
     },
     created_at: Sequelize.DATE,
@@ -23,7 +25,7 @@ var User = sequelize.define('user', {
     deleted_at: Sequelize.DATE
 }, {
     timestamps: true,
-    underscores: true,
+    underscored: true,
     paranoid: true,
     instanceMethods: {
         validPassword: function (password) {

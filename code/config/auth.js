@@ -20,15 +20,11 @@ function AuthConfig(app) {
                 username: username
             }
         }).then(function (user) {
-            user = {
-                id: 1234,
-                created_at: moment()
-            };
-            //if (!userNotValid(user, password)) {
-            //    done(null, false, {message: 'Incorrect username or password.'});
-            //} else {
+            if (!userNotValid(user, password)) {
+                done(null, false, {message: 'Incorrect username or password.'});
+            } else {
                 done(null, user);
-            //}
+            }
         });
     }));
     passport.serializeUser(function (user, done) {
