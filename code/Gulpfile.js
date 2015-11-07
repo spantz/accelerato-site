@@ -1,38 +1,40 @@
 'use strict';
 
 var gulp = require('gulp'),
-  nodemon = require('gulp-nodemon'),
-  watch = require('gulp-watch'),
   jshint = require('gulp-jshint'),
-  livereload = require('gulp-livereload');
+  sass = require('gulp-sass'),
+  babel = require('gulp-babel'),
+  transform = require('vinyl-transform'),
+  browserify = require('browserify');
+  
 
-
-//register nodemon task
-gulp.task('nodemon', function () {
-  nodemon({ script: './bin/www', env: { 'NODE_ENV': 'development' }})
-    .on('restart');
+gulp.task('sass', function () {
+  gulp.src('./src/scss/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./public/stylesheets'));
 });
 
-// Rerun the task when a file changes
-gulp.task('watch', function() {
-    var server = livereload();
-    gulp.src(['*.js','routes/*.js', 'public/*.js'], { read: true })
-        .pipe(watch({ emit: 'all' }))
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'));
+// gulp.task('babel', function(){
+//    return gulp.src('./src/js/*.js')
+//         .pipe(babel())
+//         .pipe(gulp.dest('./public/js/'));
+// });
 
-    gulp.watch(['*.js','routes/*.js', 'views/**/*.*', 'public/**/*.*']).on('change', function(file) {
-      server.changed(file.path);
-  });
+gulp.task('browserify', function () {
+    var browserified = transform(function(filename) {
+        var b = browserify(filename);
+        return b.bundle();
+    });
+
+    return gulp.src(['./src/js/*.js'])
+        .pipe(browserified)
+        // .pipe(babel())
+        .pipe(gulp.dest('./public/js/'));
 });
 
-//lint js files
-gulp.task('lint', function() {
-    gulp.src(['*.js','routes/*.js', 'public/*.js'])
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'));
+gulp.task('watch', function(){
+    gulp.watch('./src/js/*.js', ['babel']);
+    gulp.watch('./src/scss/*.scss', ['sass']);
 });
 
-
-// The default task (called when you run `gulp` from cli)
-gulp.task('default', ['lint','nodemon', 'watch']);
+gulp.task('default', ['sass', 'babel', 'browserify', 'watch']);
