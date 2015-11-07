@@ -5,15 +5,16 @@ block head
 block content
   .profile-info
     img.image(src= user.image)
-    h2.name #{user.name}
+    h2.name #{user.firstName}
     p.age #{user.age}
+    button.connect Connect with #{user.firstName}
   .courses-container
     h2.title Courses
     each course in courses
       .course
         h3.title #{course.title}
-        .session
-          .start #{course.start}
-          .end #{course.end}
-    
-  
+        each session in course.sessions
+          .session 
+            .date #{session.start.date == session.end.date ? session.start.date : session.start.date+" - "+session.end.date}
+            .time #{session.start.time} to #{session.end.time}
+          
