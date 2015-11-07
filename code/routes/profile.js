@@ -2,11 +2,13 @@
 var express = require('express');
 var router = express.Router();
 var faker = require('faker');
+var moment = require('moment');
 
 /* GET profile page. */
-router.get('/:id', function(req, res) {
+router.get('/', function(req, res) {
   var user = {
-    name: faker.name.findName(),
+    firstName: faker.name.firstName(),
+    lastName: faker.name.lastName(),
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     bio: faker.lorem.sentence(),
@@ -16,8 +18,65 @@ router.get('/:id', function(req, res) {
   var courses = [{
     title: 'Intro to Violin',
     sessions: [{
-      start: new Date('October 17, 2015 05:00:00'),
-      end: new Date('October 17, 2015 06:00:00')
+      start: {
+        date: moment( new Date('October 17, 2015 23:00:00') ).format('MMM Do'),
+        time: moment( new Date('October 17, 2015 23:00:00') ).format('h:mm a')
+      },
+      end: {
+        date: moment( new Date('October 18, 2015 00:00:00') ).format('MMM Do'),
+        time: moment( new Date('October 18, 2015 00:00:00') ).format('h:mm a')
+      },
+    },{
+      start: {
+        date: moment( new Date('October 21, 2015 17:00:00') ).format('MMM Do'),
+        time: moment( new Date('October 21, 2015 17:00:00') ).format('h:mm a')
+      },
+      end: {
+        date: moment( new Date('October 21, 2015 18:00:00') ).format('MMM Do'),
+        time: moment( new Date('October 21, 2015 18:00:00') ).format('h:mm a')
+      }
+    }]
+  },{
+    title: 'Advanced Guitar',
+    sessions: [{
+      start: {
+        date: moment( new Date('October 17, 2015 23:00:00') ).format('MMM Do'),
+        time: moment( new Date('October 17, 2015 23:00:00') ).format('h:mm a')
+      },
+      end: {
+        date: moment( new Date('October 18, 2015 00:00:00') ).format('MMM Do'),
+        time: moment( new Date('October 18, 2015 00:00:00') ).format('h:mm a')
+      }
+    },{
+      start: {
+        date: moment( new Date('October 21, 2015 17:00:00') ).format('MMM Do'),
+        time: moment( new Date('October 21, 2015 17:00:00') ).format('h:mm a')
+      },
+      end: {
+        date: moment( new Date('October 21, 2015 18:00:00') ).format('MMM Do'),
+        time: moment( new Date('October 21, 2015 18:00:00') ).format('h:mm a')
+      }
+    }]
+  }, {
+    title: 'Learn The Bangles',
+    sessions: [{
+      start: {
+        date: moment( new Date('October 17, 2015 23:00:00') ).format('MMM Do'),
+        time: moment( new Date('October 17, 2015 23:00:00') ).format('h:mm a')
+      },
+      end: {
+        date: moment( new Date('October 18, 2015 00:00:00') ).format('MMM Do'),
+        time: moment( new Date('October 18, 2015 00:00:00') ).format('h:mm a')
+      }
+    },{
+      start: {
+        date: moment( new Date('October 21, 2015 17:00:00') ).format('MMM Do'),
+        time: moment( new Date('October 21, 2015 17:00:00') ).format('h:mm a')
+      },
+      end: {
+        date: moment( new Date('October 21, 2015 18:00:00') ).format('MMM Do'),
+        time: moment( new Date('October 21, 2015 18:00:00') ).format('h:mm a')
+      }
     }]
   }];
   

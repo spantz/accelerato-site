@@ -1,14 +1,14 @@
 'use strict';
 var express = require('express');
 var router = express.Router();
-//var users = require('./users');
+var profile = require('./profile');
 
 /* GET home page. */
 router.get('/', function(req, res) {
-    res.render('profile', { title: 'Accelerato' });
+    res.render('index', { title: 'Accelerato' });
 });
 
-router.use('/users', users);
+router.use('/profile', profile);
 
 // catch 404 and forwarding to error handler
 router.use(function(req, res, next) {
