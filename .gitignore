@@ -1,8 +1,5 @@
-.vagrant
-.idea
-code/node_modules
-public/.sass-cache
-.env
-public/.DS_Store
+node_modules/
+public/components
+.sass-cache
 .DS_Store
-**npm-debug.log
+.bowerrc
