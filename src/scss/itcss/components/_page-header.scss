@@ -1,0 +1,26 @@
+.page-header {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+    
+  .title {
+    margin: 1em;
+  }
+
+  .menu {
+    // align-self: flex-end;
+    .item {
+      margin-right: 1em;
+      background: $light-jet;
+      color: white;
+      padding: .5em;
+      text-align: center;
+    }
+  }
+}

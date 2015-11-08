@@ -1,0 +1,35 @@
+//Generic
+html {
+  height: 100%;
+  overflow: hidden;
+  font-size: 12.5px;
+  
+  @media screen and (min-width: 500px){
+    font-size: 15px;
+  }
+  @media screen and (min-width: 800px){
+    font-size: 17.5px;
+  }
+  @media screen and (min-width: 1200px){
+    font-size: 20px;
+  }
+}
+body {
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+  padding: 0;
+  margin: 0;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+a {
+  color: $light-jet;
+  text-decoration: none;
+
+  &:hover {
+    color: $jet;
+  }
+}

@@ -1,0 +1,26 @@
+// Tools
+.-italic {
+  font-style: italic;
+}
+.-centered {
+  text-align: center;
+}
+.-underline {
+  text-decoration: underline;
+}
+.-break {
+  height: 4em;
+  
+  &.-small {
+      height: 2em;
+  }
+  &.-large {
+      height: 5em;
+  }
+  &.-large {
+      height: 7em;
+  }
+  &.-xlarge {
+      height: 10em;
+  }
+}

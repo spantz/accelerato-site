@@ -1,0 +1,16 @@
+.page-container {
+  display: flex;
+  justify-content: center;
+  
+  .page {
+    width: 100%;
+    background: $white;
+    min-height: 100vh;
+    padding: 0 2em;
+    margin-top: 7em;
+  }
+
+  .title {
+    font-size: 4em;
+  }
+}
