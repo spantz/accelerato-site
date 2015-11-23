@@ -7,14 +7,17 @@ block content
     img.image(src= user.image)
     h2.name #{user.firstName}
     p.age #{user.age}
-    button.connect Connect with #{user.firstName}
+    a(href="#").connect Connect with #{user.firstName}
   .courses-container
-    h2.title Courses
+    h4.title Courses
     each course in courses
       .course
         h3.title #{course.title}
         each session in course.sessions
           .session 
-            .date #{session.start.date == session.end.date ? session.start.date : session.start.date+" - "+session.end.date}
-            .time #{session.start.time} to #{session.end.time}
+            .left
+              .date #{session.start.date == session.end.date ? session.start.date : session.start.date+" - "+session.end.date}
+              .time #{session.start.time} to #{session.end.time}
+            .right
+              a(href="#").bookit.button Book It!
           

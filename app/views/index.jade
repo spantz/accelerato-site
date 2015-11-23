@@ -1,5 +1,8 @@
 extends layout
 
+block head
+    link(rel='stylesheet', href='/css/style.css')
+
 block content
   h1.title.
     Welcome to #{title}
@@ -7,6 +10,6 @@ block content
     You've got dreams, and so do we.
   h2.subtitle.
     We want to help you find the perfect music tutor.
-  .-break.-large
+  .-break.-medium
   h2.title.-centered.-underline.
     Let's get started.
