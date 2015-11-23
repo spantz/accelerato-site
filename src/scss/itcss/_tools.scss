@@ -1,4 +1,28 @@
 // Tools
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table; 
+    clear: both;
+  }
+}
+
+.button {
+  margin-right: 1em;
+  background: $jet;
+  color: $white;
+  padding: .5em;
+  line-height: 3em;
+  font-weight: 700;
+  text-align: center;
+
+  pointer: cursor;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
 .-italic {
   font-style: italic;
 }
@@ -24,3 +48,4 @@
       height: 10em;
   }
 }
+

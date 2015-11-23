@@ -3,24 +3,31 @@
   left: 0;
   position: fixed;
   width: 100%;
+  font-size: 2em;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-    
-  .title {
-    margin: 1em;
-  }
 
+
+  .title {
+    font-size: 1em;
+    a { color: $jet; }
+  }
+  .title,
   .menu {
-    // align-self: flex-end;
+    padding: 0 .5em;
+  }
+  .menu {
+    font-size: .5em;
+
     .item {
-      margin-right: 1em;
-      background: $light-jet;
-      color: white;
-      padding: .5em;
-      text-align: center;
+      @extend .button;
     }
+  }
+  
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
   }
 }

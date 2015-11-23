@@ -1,0 +1,26 @@
+.profile-info {
+  text-align: center;
+  .image {
+    border-radius: $image-height;
+    height: $image-height;
+    overflow: hidden;
+    box-shadow: 0 0 .5em $light-gray;
+  }
+  .name {
+    font-size: 2em;
+    font-weight: 700;
+  }
+  .age {
+    font-size: 1em;
+    margin: .25em;
+    color: $light-gray;
+  }
+  .connect {
+    @extend .button;
+    margin-top: 1em;
+    font-size: 1em;
+    border: none;
+    margin: 0;
+    font-family: $main-font-family;
+  }
+}

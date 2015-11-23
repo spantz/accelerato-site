@@ -1,77 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-//Settings
-$light-gray: #DFDFDF;
-$yellow : #F8E71C;
-$image-height: 9em;
-//Tools
-@mixin clearfix {
-  &:after {
-    content: "";
-    display: table; 
-    clear: both;
-  }
-}
-//Generic
+@import "itcss/base";
+@import "itcss/settings";
+@import "itcss/tools";
+@import "itcss/generic";
+@import "itcss/objects";
+@import "itcss/components/page-container";
+@import "itcss/components/page-header";
+@import 'itcss/components/courses-container';
+@import 'itcss/components/profile-info';
+@import "itcss/trumps";
 
-//Base
-
-//Objects
-.profile-info {
-  text-align: center;
-  .image {
-    border-radius: $image-height;
-    height: $image-height;
-    overflow: hidden;
-    box-shadow: 0 0 .25em $light-gray;
-  }
-  .name {
-    font-size: 1.5em;
-    font-weight: 700;
-  }
-  .age {
-    font-size: .5em;
-    margin: .25em;
-    color: $light-gray;
-  }
-}
-.courses-container {
-  margin-top: 1em;
-  
-  .course {
-    margin-top: 1.5em;
-    
-    .title {
-      border-bottom: $yellow .25em solid;
-      padding-bottom: .25em;
-    }
-  }
-  .session {
-    padding: 1em;
-    cursor: pointer;
-    @include clearfix;
-    
-    .date { 
-      font-size: .75em;
-      font-weight: bold;
-    }
-    
-    .time { 
-      font-size: .75em;
-    }
-    
-    // .start { text-align: left; }
-    
-    // .end { text-align: right; }
-    
-    &:hover {
-      background-color: $light-gray;
-    }
-  } 
-}
-//Components
-
-//Trumps
 
 
 

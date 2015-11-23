@@ -1,0 +1,42 @@
+.courses-container {
+
+  margin-top: 1em;
+  
+  > .title {
+    font-size: 1em;
+  }
+
+  .course {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+
+    > .title {
+      font-size: 2em;
+      border-bottom: $dark-blue .25em solid;
+      padding-bottom: .25em;
+    }
+  }
+  .session {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+    .date {
+      font-weight: bold;
+    }
+
+    .bookit {
+      opacity: 0;
+      padding: 1em 2em;
+      color: $white;
+      background: darken($dark-blue, 10%);
+    }
+
+    &:hover {
+      background: $dark-blue;
+      .bookit { opacity: 1; }
+    }
+  } 
+}

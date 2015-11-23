@@ -5,6 +5,18 @@ $white : #FFFFFF;
 $jet : #1D2120;
 $light-jet: lighten($jet, 20%);
 $gray: #DFDFDF;
+$light-gray: #DFDFDF;
 $yellow : #F8E71C;
 $blue : #00ABE4;
 $dark-blue : darken($blue, 20%);
+
+$image-height: 9em;
+
+$main-font-family: 'Montserrat', sans-serif;
+
+// Media Query
+// 
+$mobile      : 500px;
+$tablet      : 700px;
+$desktop     : 1000px;
+$big-desktop : 1200px;
